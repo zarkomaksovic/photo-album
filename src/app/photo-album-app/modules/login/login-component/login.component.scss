@@ -1,0 +1,93 @@
+@import "../../../scss/variables";
+
+.container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* login form holder */
+  .login-holder {
+    width: 540px;
+    height: 437px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+
+    .headline {
+      font-size: $font-large;
+      margin: 0px 0px 5px 0px;
+    }
+
+    .error-message {
+        color: red;
+    }
+    /* username and email field settings and focus animations*/
+    .form-group {
+      position: relative;
+      padding: 15px 0 0;
+      margin-top: 30px;
+    }
+    .form-field {
+      font-family: inherit;
+      width: 100%;
+      border: 0;
+      border-bottom: 2px solid black;
+      outline: 0;
+      font-size: 30px;
+      padding: 10px 0;
+      background: transparent;
+      transition: border-color 0.2s;
+      &::placeholder {
+        color: transparent;
+      }
+      &:placeholder-shown ~ .form-label {
+        font-size: 30px;
+        cursor: text;
+        top: 20px;
+      }
+    }
+
+    .form-label {
+      position: absolute;
+      top: 0;
+      display: block;
+      transition: 0.2s;
+      color: black;
+    }
+
+    .form-field:focus {
+      ~ .form-label {
+        position: absolute;
+        top: 0;
+        display: block;
+        transition: 0.2s;
+        font-size: 1rem;
+        color: $primary-yelow;
+        font-weight: 700;
+      }
+      padding-bottom: 6px;
+      font-weight: 700;
+      border-width: 3px;
+      border-image: linear-gradient(to right, $primary-yelow, $secondary-yelow);
+      border-image-slice: 1;
+    } 
+    .form-field {
+      &:required,
+      &:invalid {
+        box-shadow: none;
+      }
+    }
+
+    /* login button style*/
+    .button-login {
+      background: $color-button;
+      width: 100%;
+      min-height: 80px;
+      color: white;
+      border: none;
+      margin-top: 32px;
+      letter-spacing: 8px;
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+<div class="container">
+  <!-- login form box  -->
+  <div class="login-holder">
+    <p class="headline">
+      Uloguješ se
+    </p>
+    <form [formGroup]="loginForm">
+      <!-- username field   -->
+
+      <div class="form-group field">
+        <input
+          type="input"
+          class="form-field"
+          placeholder="Korisnicko ime"
+          name="user_name"
+          id="user_name"
+          #userName
+          formControlName="user_name"
+        />
+        <label for="user_name" class="form-label">korisnicko ime</label>
+      </div>
+      <span
+        class="error-message"
+        *ngIf="
+          !loginForm.get('user_name').valid &&
+          loginForm.get('user_name').touched
+        "
+        >User name must be 6 characters minimum!</span
+      >
+      <!-- /username field   -->
+
+      <!-- email field  -->
+
+      <div class="form-group field">
+        <input
+          type="email"
+          class="form-field"
+          placeholder="Email"
+          name="email"
+          #email
+          id="email"
+          formControlName="email"
+        />
+        <label for="email" class="form-label">email</label>
+      </div>
+      <span
+        class="error-message"
+        *ngIf="!loginForm.get('email').valid && loginForm.get('email').touched"
+        >Please enter your email!</span
+      >
+      <!-- /email field  -->
+
+      <!-- login button  -->
+      <button class="button-login" (click)="login(userName.value, email.value)">
+        KLIKNI
+      </button>
+      <!-- /login button  -->
+    </form>
+  </div>
+  <!--/login form box  -->
+</div>

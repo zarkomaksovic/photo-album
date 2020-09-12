@@ -47,7 +47,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/app/photo-album-app/scss/style.scss"
             ],
             "scripts": []
           },
