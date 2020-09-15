@@ -1,0 +1,28 @@
+@import '../../../../scss/variables';
+.container {
+    width: 58%;
+    margin: auto;
+    margin-top: 60px;
+}
+.headline {
+    font-size: $font-large;
+    margin-top: 20px;
+}
+.cards-holder {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.headline-holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 81px;
+    margin-top: 60px;
+}
+.inactive {
+    flex-direction: column;
+}
+.active {
+    flex-direction: row;
+}

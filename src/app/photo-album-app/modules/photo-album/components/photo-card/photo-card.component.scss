@@ -1,0 +1,41 @@
+
+.content-holder {
+  width: 353px;
+  margin-bottom: 60px;
+}
+.image-holder {
+//   height: 220.63px;
+  width: 353px;
+  height: 200px;
+  background: gray;
+  margin-bottom: 16px;
+  img {
+    object-fit: contain;
+  }
+}
+.heading {
+  height: 38px;
+  width: 319px;
+  color: #000000;
+  font-size: 32px;
+  font-weight: 100;
+  letter-spacing: 0;
+  line-height: 39px;
+  overflow: hidden;
+}
+.heading:hover {
+  color: #ffc23b;
+  cursor: pointer;
+}
+.created-by {
+  height: 21px;
+  color: #8a8a8a;
+  font-size: 18px;
+  font-weight: 300;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+.active {
+    display: flex;
+    width: 100%;
+}

@@ -1,11 +1,15 @@
-<div class="content-holder">
+<a [routerLink]="['./albums', card.id]">
+  <div class="content-holder" [ngClass]="layout ? 'inactive' : 'active'">
     <div class="image-holder">
-        <img src="" alt="">
+      <img src="" alt="" />
     </div>
-    <div class="heading">
-        <p>naslov</p>
+    <div class="text-holder">
+      <div class="heading">
+        <p>{{ card.title }}</p>
+      </div>
+      <div class="created-by">
+        <p>kreirao: {{ card.title }}</p>
+      </div>
     </div>
-    <div class="created-by">
-        <p>created by</p>
-    </div>
-</div>
+  </div>
+</a>
